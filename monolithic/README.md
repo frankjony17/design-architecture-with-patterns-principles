@@ -90,6 +90,7 @@ You can imagine that we are building an e-commerce application that takes orders
 Lets see example Reference Monolithic Architectures.
 
 **Reference Monolithic Architecture 1**
+
 ![architecture-1](/monolithic/images/architecture_1.png)
 
 The application can include several components like GUI and business logics and database persistence layers. The application is deployed as a single monolithic application. For example, a Java web application consists of a single WAR file that runs on a web container such as Tomcat. You can run multiple instances of the application behind a load balancer in order to scale and improve availability.
