@@ -7,10 +7,7 @@ If all the functionalities of a project exists in a single codebase, then that a
 
 In the monolith pattern, everything from user interface, business codes and database calls is included in the same codebase. All application concerns are contained in a single big deployment. Even the monolithic applications can design in different layers like presentation, business and data layer and then deploy that codebase as single jar/war file.
 
-<div style="text-align:center">
-  <img src="/monolithic/images/intro.png" alt="monolithic-architecture" width="350"/>  
-</div>
-
+<img src="/monolithic/images/intro.png" alt="monolithic-architecture" width="350"/>
 
 There are several advantages to the monolith approach that we will discuss them in the upcoming captions. But let me say some main advantages and disadvantages here.
 
