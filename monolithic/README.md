@@ -17,6 +17,7 @@ Unfortunately, the monolith architecture has lots of disadvantages, we can say t
 
 As you can see that we understand Monolithic Architecture.
 
+---
 
 ### When to use Monolithic Architecture
 Even monolithic architecture has lots of disadvantages, if you are building small application, still monolithic architecture is one of the best architecture that you can apply for your projects.
@@ -36,6 +37,8 @@ is very easy and fast.
 It is simple to develop relative to microservices where skilled developers are required in order to identify and develop the services. 
 It is easier to deploy as only a single jar/war file is deployed.
 
+---
+
 ### Request per Second and Acceptable Latency
 And if you don't need to expect hundreds of request, you can scale it vertically which is scaling up, that means upgrading existing server. 
 By this way you can avoid the problems of network latency and security are relatively less if we compare with the microservices architecture.
@@ -46,6 +49,8 @@ As you can see in the table, we will start a small e-commerce application that g
 So if you don’t expect any growth of your customer base, so we should pick the Monolithic architecture.
 
 Even we expect growth of our users to 500K or millions of users, its good to start simple and evolve step by step.
+
+---
 
 ### Benefits of Monolithic Architecture
 As we said before the monolithic architecture is considered to be a traditional way of building applications. A monolithic application is built as a single big code base that means it has one large code base. If developers want to update or change something, they access the same code base. So, they make changes in the whole stack at once.
@@ -61,6 +66,8 @@ So What is the Strengths — Benefits — Advantages of the Monolithic Architect
 
 So if you are building small application, still monolithic architecture is one of the best architecture that you can apply for your projects.
 
+---
+
 ### Challenges of Monolithic Architecture
 - **Understanding**:<br>
   It becomes too large in size with time and that’s why its difficult to manage.
@@ -74,6 +81,8 @@ So if you are building small application, still monolithic architecture is one o
 
 - **Scalability:**<br>
   You cannot scale components independently, the only option is the scaling the whole application. Maybe one of your module get more request according to other modules but you have to scale for all modules in your application. You can’t separate modules and scale independently.
+
+---
 
 ### Reference architectures of Monolithic Architecture
 You can imagine that we are building an e-commerce application that takes orders from customers, add to basket and checkout the order and so on.
@@ -90,10 +99,12 @@ As a result this solution has a number of benefits:
 - Simple to develop — you develop in single code base.
 - Simple to deploy — you simply need to deploy only the WAR file.
 - Simple to scale — you can scale the application by running multiple copies of the application behind a load balancer.
+---
 
 ### Reference Monolithic Architecture 2
 Here is we can see different illustrations, again e-commerce application.
 ![architecture-2](/monolithic/images/architecture_2.png)
+---
 
 ### Evolve Reference Monolithic Architectures
 And the last one shows how to evolve monolithic architecture.
@@ -102,6 +113,8 @@ And the last one shows how to evolve monolithic architecture.
 You can see in this picture, the evolution of monolithic architecture. So its start with standalone 1 application server and database. After that we can split Client application, after that split the business logic and data access and last we split services components in monolithic application.
 
 So as you can see that we will also follow these example reference monolithic architectures and principles and design our own e-commerce application.
+
+---
 
 ### Design principles of Monolithic Architecture — KISS, YAGNI, DRY
 In software industry, we can get projects from the easiest to the most complex projects and solutions from our clients. However, it is often that we fall into the trap of **designing more complex systems** than necessary required systems.
@@ -122,14 +135,14 @@ In the book of 'The Pragmatic Programmer'’', we can see this definition for DR
 ><cite>-- Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</cite>
 
 This means that, you must try to maintain the behavior of a functionality of the system in a single piece of code, it should not have duplicated code or design item. Since we are looking these principles for system design, we will follow same concepts with software development. It’s easier to maintain a code or system that is only in one place, because if you need to change something in the code or system, you just need to change in one place.
-
+---
 ### KISS Principle
 KISS is stands for "**Keep It Simple, Stupid**".
 
 This principle says about to make your code or system simple. You should avoid unnecessary complexity. A simple code it’s easier to maintain and easier to understand. You can apply this principle in the design and in the implementation of the code. You should eliminate duplicated code, should remove unnecessary features, use names for apis and methods that makes sense and matches their responsibilities.
 
 You also should separate the responsibilities of your applications and the responsibilities from the layers of the systems. Most systems work best if they are kept simple rather than making them complex designs; therefore, simplicity should be a key goal in design and unnecessary complexity should be avoided.
-
+---
 ### YAGNI Principle
 YAGNI is stands for "**You Ain’t Gonna Need It**".
 
@@ -137,6 +150,8 @@ Sometimes, we try to think way ahead, into the future of the project, adding som
 This principle is similar to the KISS principle, both of them aim for a simpler solution. The difference between them is that YAGNI focus on removing unnecessary functionality and logic and KISS focus on the complexity.
 
 So **with following these principles**, we will start to design our **e-commerce application architecture**. Remember that a clean system, it’s easier to main, easier to understand and for sure it will save your time when you need to change or implement something.
+
+---
 
 ### Design the Monolithic Architecture — E-Commerce App — KISS & YAGNI
 In this part we are going to design our **e-commerce application** with the monolithic architecture step by step. We will iterate the architecture design one by one as per requirements.
@@ -183,6 +198,8 @@ As you can see that all modules of this traditional web application, such as Sho
 
 This monolithic application has a massive codebase that includes all modules. If you introduce new modules to this application, you have to make changes to the existing code and then deploy the artifact with a different code to the Tomcat server. We can develop Java application and output to single WAR Artifact. We can use Oracle or PostgreSQL for our e-commerce monolithic database.
 
+---
+
 ### Communication of Components — E-Commerce App — Monolithic Application — Inter-Process Communication
 As you know that, monolithic application sitting in the same server with all modules. So we don’t need to make any network call. So it is very easy and fast to communicate between modules of our E -Commerce Monolithic Application.
 
@@ -192,6 +209,8 @@ The communication will be INTER-PROCESS COMMUNICATION.
 **Inter-process communication** is the mechanism provided by the operating system that **allows processes to communicate with each other**. So that means communication performs by method calls into the code.
 
 This communication could involve a **process letting another process know** that some event has occurred or **transferring of data** from one process to another. As you can see that we only use method calls for communication in monolithic architectures.
+
+---
 
 ### Transaction Management in Monolithic Architectures
 Transaction management in Monolith architecture is quite easy compared to Microservice Architecture. Many frameworks or languages contains some mechanism for transaction management. For example orm tools with applying unit of work patterns.
@@ -213,6 +232,8 @@ function place_order()
 As you can see that we can handle all operations into one method and surround operation in a **transactional scope**.
 
 By this way, Transactions operated in the transaction scope are kept in memory **without writing to the database** until they are **committed**, and if a Rollback is made at any time, all transactions that have been processed so far in the scope are deleted from memory and the transaction is canceled. **Without rollback**, when **Commit** is written to the **database**, the transaction is completed successfully.
+
+---
 
 ### Deployments for Monolithic Architecture
 We have design the architecture and think about that how we can deploy this architecture ? As we already said before, since this is **single code base**, It is **harder to implement new changes** in such a large and complex application with highly tight coupling. Any code change affects the whole system.
