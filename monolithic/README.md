@@ -250,3 +250,8 @@ Even the **smallest change requires full deployment** of the entire application 
 ![deployments-monolithic-architecture](/monolithic/images/deployments_monolithic_architecture.png)
 
 **See the image**. The large developer **team commits** their changes to a **single source code repository**. The path from **code commit** to production is long and hard to manage and requires manual testing. So that comes with the application is large, complex, unreliable, and difficult to maintain. In order to solve these problems we should **evolve** our **architecture** to **Microservices** Architecture.
+
+---
+
+You can find all design off Monolithic Architecture drawings on below path:
+- [Design Monolithic Architecture Pages](/monolithic/designs)
