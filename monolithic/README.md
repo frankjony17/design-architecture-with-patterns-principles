@@ -101,14 +101,14 @@ As a result this solution has a number of benefits:
 - Simple to deploy — you simply need to deploy only the WAR file.
 - Simple to scale — you can scale the application by running multiple copies of the application behind a load balancer.
 ---
-
 ### Reference Monolithic Architecture 2
 Here is we can see different illustrations, again e-commerce application.
+
 ![architecture-2](/monolithic/images/architecture_2.png)
 ---
-
 ### Evolve Reference Monolithic Architectures
 And the last one shows how to evolve monolithic architecture.
+
 ![architecture-3](/monolithic/images/architecture_3.png)
 
 You can see in this picture, the evolution of monolithic architecture. So its start with standalone 1 application server and database. After that we can split Client application, after that split the business logic and data access and last we split services components in monolithic application.
@@ -193,6 +193,7 @@ Now we can consider to Database and Components of e-commerce application.
 - Order Service
 
 With following all these considerations, we can design our E-Commerce Monolithic Architecture with applying tech stack as below image;
+
 ![monolithic-architecture](/monolithic/images/monolithic-architecture.png)
 
 As you can see that all modules of this traditional web application, such as Shop Front UI, Catalog Service, SC Service, Discount Service and Order Service, are single artifacts in the container.
@@ -205,6 +206,7 @@ This monolithic application has a massive codebase that includes all modules. If
 As you know that, monolithic application sitting in the same server with all modules. So we don’t need to make any network call. So it is very easy and fast to communicate between modules of our E -Commerce Monolithic Application.
 
 The communication will be INTER-PROCESS COMMUNICATION.
+
 ![inter-process-communication](/monolithic/images/inter_process_communication.png)
 
 **Inter-process communication** is the mechanism provided by the operating system that **allows processes to communicate with each other**. So that means communication performs by method calls into the code.
@@ -240,6 +242,7 @@ By this way, Transactions operated in the transaction scope are kept in memory *
 We have design the architecture and think about that how we can deploy this architecture ? As we already said before, since this is **single code base**, It is **harder to implement new changes** in such a large and complex application with highly tight coupling. Any code change affects the whole system.
 
 Even the **smallest change requires full deployment** of the entire application — it is **expensive** and **risky**. It is **not reliable** that a single bug in any module can bring down the whole monolithic application.
+
 ![deployments-monolithic-architecture](/monolithic/images/deployments_monolithic_architecture.png)
 
 **See the image**. The large developer **team commits** their changes to a **single source code repository**. The path from **code commit** to production is long and hard to manage and requires manual testing. So that comes with the application is large, complex, unreliable, and difficult to maintain. In order to solve these problems we should **evolve** our **architecture** to **Microservices** Architecture.
