@@ -137,6 +137,7 @@ In the book of 'The Pragmatic Programmer'’', we can see this definition for DR
 
 This means that, you must try to maintain the behavior of a functionality of the system in a single piece of code, it should not have duplicated code or design item. Since we are looking these principles for system design, we will follow same concepts with software development. It’s easier to maintain a code or system that is only in one place, because if you need to change something in the code or system, you just need to change in one place.
 ---
+
 ### KISS Principle
 KISS is stands for "**Keep It Simple, Stupid**".
 
@@ -144,6 +145,7 @@ This principle says about to make your code or system simple. You should avoid u
 
 You also should separate the responsibilities of your applications and the responsibilities from the layers of the systems. Most systems work best if they are kept simple rather than making them complex designs; therefore, simplicity should be a key goal in design and unnecessary complexity should be avoided.
 ---
+
 ### YAGNI Principle
 YAGNI is stands for "**You Ain’t Gonna Need It**".
 
